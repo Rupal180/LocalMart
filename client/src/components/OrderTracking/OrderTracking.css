@@ -1,0 +1,1248 @@
+/* =========================================================
+   LOCALMART — PREMIUM ORDER TRACKING
+   Cream + Charcoal + Teal + Amber
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.tracking-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 8% 25%,
+      rgba(217, 164, 65, 0.09),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 92% 60%,
+      rgba(15, 118, 110, 0.07),
+      transparent 27%
+    ),
+    #f5f2ec;
+
+  color: #172033;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.tracking-header {
+  min-height: 88px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  border-bottom: 1px solid #e1dbd0;
+
+  background: rgba(250, 248, 244, 0.94);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.tracking-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.tracking-brand > span {
+  font-size: 31px;
+}
+
+.tracking-brand > div {
+  text-align: left;
+}
+
+.tracking-brand h2 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 27px;
+  font-weight: 850;
+}
+
+.tracking-brand small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #968b7a;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+}
+
+.tracking-header-secure {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #70695f;
+
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.tracking-header-secure svg {
+  color: #0f766e;
+  font-size: 17px;
+}
+
+.tracking-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 11px 17px;
+
+  border: 1px solid #dcd5ca;
+  border-radius: 12px;
+
+  background: #fffdf9;
+
+  color: #3c4654;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.tracking-back-btn:hover {
+  border-color: #172033;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.tracking-hero {
+  border-bottom: 1px solid #e0dad0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ede7dc 0%,
+      #faf8f3 52%,
+      #e6efec 100%
+    );
+}
+
+.tracking-hero-inner {
+  width: min(1240px, calc(100% - 70px));
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 60px;
+
+  margin: auto;
+
+  padding: 58px 0;
+}
+
+.tracking-hero-copy {
+  max-width: 650px;
+}
+
+.tracking-eyebrow {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 14px;
+
+  border: 1px solid #d7c5a3;
+  border-radius: 30px;
+
+  background: rgba(255, 253, 249, 0.78);
+
+  color: #986917;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+.tracking-hero-copy h1 {
+  margin: 17px 0 13px;
+
+  color: #172033;
+
+  font-size: clamp(42px, 5vw, 61px);
+
+  line-height: 1.03;
+
+  letter-spacing: -2.4px;
+}
+
+.tracking-hero-copy h1 span {
+  color: #0f766e;
+}
+
+.tracking-hero-copy p {
+  margin: 0;
+
+  color: #716a60;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   ETA CARD
+========================================================= */
+
+.tracking-eta-card {
+  min-width: 350px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 24px;
+
+  border: 1px solid #ddd5c8;
+  border-radius: 22px;
+
+  background: rgba(255, 253, 249, 0.94);
+
+  box-shadow:
+    0 20px 50px rgba(49, 42, 32, 0.09);
+}
+
+.tracking-eta-icon {
+  width: 62px;
+  height: 62px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: #172033;
+
+  color: white;
+
+  font-size: 25px;
+}
+
+.tracking-eta-card span {
+  color: #9b721f;
+
+  font-size: 10px;
+  font-weight: 850;
+
+  letter-spacing: 1.3px;
+}
+
+.tracking-eta-card h3 {
+  margin: 5px 0 4px;
+
+  color: #172033;
+
+  font-size: 22px;
+}
+
+.tracking-eta-card p {
+  margin: 0;
+
+  color: #81796d;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.tracking-main {
+  width: min(1240px, calc(100% - 70px));
+
+  margin: auto;
+
+  padding: 40px 0 75px;
+}
+
+
+/* =========================================================
+   ORDER SUMMARY BAR
+========================================================= */
+
+.tracking-order-bar {
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    1.35fr
+    0.55fr
+    0.8fr
+    auto;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  margin-bottom: 26px;
+
+  border: 1px solid #ded8ce;
+  border-radius: 18px;
+
+  background: #fffdf9;
+
+  box-shadow:
+    0 12px 35px rgba(48, 41, 31, 0.06);
+}
+
+.tracking-order-bar > div {
+  min-height: 86px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 17px 23px;
+
+  border-right: 1px solid #e8e2d8;
+}
+
+.tracking-order-bar > div:last-child {
+  border-right: none;
+}
+
+.tracking-order-bar span {
+  color: #968d80;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.tracking-order-bar strong {
+  margin-top: 5px;
+
+  color: #343d4b;
+
+  font-size: 13px;
+}
+
+.tracking-order-bar .tracking-total {
+  color: #172033;
+
+  font-size: 19px;
+}
+
+.tracking-order-bar .tracking-status {
+  min-height: 86px;
+
+  flex-direction: row;
+  align-items: center;
+
+  gap: 8px;
+
+  background: #e7f1ee;
+
+  color: #0f766e;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.tracking-live-dot {
+  width: 8px;
+  height: 8px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background: #0f766e;
+
+  box-shadow:
+    0 0 0 5px rgba(15, 118, 110, 0.11);
+}
+
+
+/* =========================================================
+   TRACKING STATUS CARD
+========================================================= */
+
+.tracking-status-card {
+  padding: 30px;
+
+  margin-bottom: 26px;
+
+  border: 1px solid #dad5ca;
+  border-radius: 23px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffdf9,
+      #f5f2eb
+    );
+
+  box-shadow:
+    0 15px 45px rgba(48, 41, 31, 0.07);
+}
+
+.tracking-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tracking-section-heading > div:first-child > span {
+  color: #a2731d;
+
+  font-size: 10px;
+  font-weight: 850;
+
+  letter-spacing: 1.3px;
+}
+
+.tracking-section-heading h2 {
+  margin: 5px 0 0;
+
+  color: #172033;
+
+  font-size: 24px;
+}
+
+.tracking-live-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 12px;
+
+  border: 1px solid #a9d0c6;
+  border-radius: 30px;
+
+  background: #e8f3f0;
+
+  color: #0f766e;
+
+  font-size: 10px;
+  font-weight: 850;
+
+  letter-spacing: 1px;
+}
+
+.tracking-live-badge span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #0f766e;
+}
+
+
+/* =========================================================
+   PROGRESS TRACKER
+========================================================= */
+
+.tracking-progress-wrapper {
+  position: relative;
+
+  margin-top: 40px;
+}
+
+.tracking-progress-line {
+  height: 4px;
+
+  position: absolute;
+
+  top: 21px;
+  left: 6%;
+  right: 6%;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #ddd9d1;
+}
+
+.tracking-progress-fill {
+  height: 100%;
+
+  border-radius: 10px;
+
+  background: #0f766e;
+
+  transition: width 0.5s ease;
+}
+
+.tracking-steps {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.tracking-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.tracking-step-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 3px solid #fffdf9;
+  border-radius: 50%;
+
+  background: #ddd9d1;
+
+  color: #80786c;
+
+  font-size: 17px;
+
+  box-shadow:
+    0 0 0 1px #d2ccc1;
+}
+
+.tracking-step-complete
+.tracking-step-icon {
+  background: #0f766e;
+
+  color: white;
+
+  box-shadow:
+    0 0 0 1px #0f766e,
+    0 7px 18px rgba(15, 118, 110, 0.2);
+}
+
+.tracking-step-copy {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 11px;
+}
+
+.tracking-step-copy strong {
+  color: #4b5360;
+
+  font-size: 13px;
+}
+
+.tracking-step-copy span {
+  margin-top: 3px;
+
+  color: #999083;
+
+  font-size: 10px;
+}
+
+.tracking-step-complete
+.tracking-step-copy strong {
+  color: #0f766e;
+}
+
+
+/* =========================================================
+   TWO COLUMN LAYOUT
+========================================================= */
+
+.tracking-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.55fr)
+    minmax(320px, 0.75fr);
+
+  gap: 26px;
+}
+
+.tracking-left-column,
+.tracking-right-column {
+  display: flex;
+  flex-direction: column;
+
+  gap: 26px;
+}
+
+
+/* =========================================================
+   GENERIC CARD
+========================================================= */
+
+.tracking-card {
+  overflow: hidden;
+
+  border: 1px solid #ded8ce;
+  border-radius: 21px;
+
+  background: #fffdf9;
+
+  box-shadow:
+    0 12px 38px rgba(48, 41, 31, 0.06);
+}
+
+.tracking-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 22px 24px;
+
+  border-bottom: 1px solid #ebe5dc;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f3efe7,
+      #fffdf9
+    );
+}
+
+.tracking-card-title > div > span {
+  color: #a1721d;
+
+  font-size: 10px;
+  font-weight: 850;
+
+  letter-spacing: 1.2px;
+}
+
+.tracking-card-title h2 {
+  margin: 5px 0 0;
+
+  color: #172033;
+
+  font-size: 20px;
+}
+
+.tracking-item-count {
+  padding: 7px 11px;
+
+  border-radius: 20px;
+
+  background: #eeeae3;
+
+  color: #625c53;
+
+  font-size: 11px;
+  font-weight: 750;
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.tracking-products {
+  padding: 4px 24px;
+}
+
+.tracking-product {
+  display: grid;
+
+  grid-template-columns:
+    76px
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 17px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #eee8df;
+}
+
+.tracking-product:last-child {
+  border-bottom: none;
+}
+
+.tracking-product-image {
+  width: 76px;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px;
+
+  border: 1px solid #e5dfd5;
+  border-radius: 16px;
+
+  background: #f3f0ea;
+}
+
+.tracking-product-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.tracking-product-info h3 {
+  margin: 0 0 5px;
+
+  color: #303947;
+
+  font-size: 15px;
+}
+
+.tracking-product-info span {
+  color: #8d8579;
+
+  font-size: 11px;
+}
+
+.tracking-product-info p {
+  margin: 6px 0 0;
+
+  color: #686158;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tracking-product > strong {
+  color: #172033;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   ADDRESS
+========================================================= */
+
+.tracking-address {
+  display: flex;
+
+  gap: 16px;
+
+  padding: 24px;
+}
+
+.tracking-info-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #e6efec;
+
+  color: #0f766e;
+
+  font-size: 19px;
+}
+
+.tracking-address > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.tracking-address span,
+.tracking-payment-row span {
+  color: #958c7e;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.tracking-address strong {
+  margin-top: 5px;
+
+  color: #343d4b;
+
+  font-size: 14px;
+}
+
+.tracking-address p {
+  max-width: 520px;
+
+  margin: 7px 0 0;
+
+  color: #746d63;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+.tracking-phone {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 10px;
+
+  padding: 7px 10px;
+
+  border-radius: 9px;
+
+  background: #f1eee8;
+
+  color: #4f5660;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PAYMENT
+========================================================= */
+
+.tracking-payment-row {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 23px 24px 15px;
+}
+
+.tracking-payment-row > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.tracking-payment-row strong {
+  margin-top: 5px;
+
+  color: #343d4b;
+
+  font-size: 14px;
+}
+
+.tracking-secure-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 4px 24px 22px;
+
+  padding: 11px 12px;
+
+  border: 1px solid #d5e2de;
+  border-radius: 11px;
+
+  background: #edf4f2;
+
+  color: #5e716c;
+
+  font-size: 11px;
+}
+
+.tracking-secure-note svg {
+  color: #0f766e;
+}
+
+
+/* =========================================================
+   BILL
+========================================================= */
+
+.tracking-bill {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  padding: 23px 24px;
+}
+
+.tracking-bill > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tracking-bill span {
+  color: #716a60;
+
+  font-size: 12px;
+}
+
+.tracking-bill strong {
+  color: #343d4b;
+
+  font-size: 12px;
+}
+
+.tracking-bill
+.tracking-saving-row strong {
+  color: #a46d0e;
+}
+
+.tracking-bill-divider {
+  height: 1px;
+
+  margin: 2px 0;
+
+  background: #e5dfd5;
+}
+
+.tracking-final-total {
+  padding-top: 3px;
+}
+
+.tracking-final-total span {
+  color: #172033;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.tracking-final-total strong {
+  color: #172033;
+
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   SUPPORT
+========================================================= */
+
+.tracking-support-card {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+
+  padding: 22px;
+
+  border: 1px solid #dacdaF;
+  border-radius: 19px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eee5d5,
+      #f8f4ec
+    );
+}
+
+.tracking-support-icon {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #c8922f;
+
+  color: white;
+
+  font-size: 18px;
+}
+
+.tracking-support-card span {
+  color: #9a6914;
+
+  font-size: 9px;
+  font-weight: 850;
+
+  letter-spacing: 1.2px;
+}
+
+.tracking-support-card h3 {
+  margin: 5px 0;
+
+  color: #34312c;
+
+  font-size: 16px;
+}
+
+.tracking-support-card p {
+  margin: 0;
+
+  color: #756d61;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   BOTTOM ACTION
+========================================================= */
+
+.tracking-bottom-actions {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 34px;
+}
+
+.tracking-shop-btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 13px 21px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #172033;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(23, 32, 51, 0.16);
+
+  transition: 0.2s;
+}
+
+.tracking-shop-btn:hover {
+  transform: translateY(-2px);
+
+  background: #253148;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .tracking-hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tracking-eta-card {
+    width: 100%;
+  }
+
+  .tracking-order-bar {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .tracking-order-bar
+  .tracking-status {
+    grid-column: span 2;
+  }
+
+  .tracking-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .tracking-header {
+    padding: 0 18px;
+  }
+
+  .tracking-header-secure {
+    display: none;
+  }
+
+  .tracking-back-btn {
+    padding: 10px;
+    font-size: 0;
+  }
+
+  .tracking-back-btn svg {
+    font-size: 18px;
+  }
+
+  .tracking-hero-inner,
+  .tracking-main {
+    width: calc(100% - 30px);
+  }
+
+  .tracking-hero-inner {
+    padding: 45px 0;
+  }
+
+  .tracking-hero-copy h1 {
+    font-size: 42px;
+  }
+
+  .tracking-eta-card {
+    min-width: 0;
+  }
+
+  .tracking-order-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tracking-order-bar > div {
+    border-bottom: 1px solid #e8e2d8;
+  }
+
+  .tracking-status-card {
+    padding: 23px 16px;
+  }
+
+  .tracking-progress-wrapper {
+    overflow-x: auto;
+
+    padding-bottom: 8px;
+  }
+
+  .tracking-progress-line {
+    width: 540px;
+
+    left: 45px;
+    right: auto;
+  }
+
+  .tracking-steps {
+    width: 630px;
+  }
+}
+
+
+@media (max-width: 520px) {
+
+  .tracking-brand h2 {
+    font-size: 22px;
+  }
+
+  .tracking-brand > span {
+    font-size: 26px;
+  }
+
+  .tracking-hero-copy h1 {
+    font-size: 37px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .tracking-hero-copy p {
+    font-size: 14px;
+  }
+
+  .tracking-eta-card {
+    padding: 18px;
+  }
+
+  .tracking-eta-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .tracking-eta-card h3 {
+    font-size: 19px;
+  }
+
+  .tracking-order-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .tracking-order-bar
+  .tracking-status {
+    grid-column: auto;
+  }
+
+  .tracking-order-bar > div {
+    min-height: 72px;
+
+    border-right: none;
+  }
+
+  .tracking-product {
+    grid-template-columns:
+      62px
+      1fr
+      auto;
+
+    gap: 12px;
+  }
+
+  .tracking-product-image {
+    width: 62px;
+    height: 62px;
+  }
+
+  .tracking-card-title {
+    padding: 19px;
+  }
+
+  .tracking-products {
+    padding: 3px 19px;
+  }
+
+  .tracking-address,
+  .tracking-payment-row {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+}

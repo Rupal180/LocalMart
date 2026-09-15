@@ -1,0 +1,877 @@
+/* =====================================================
+                        FOOTER
+===================================================== */
+
+.footer {
+  width: 100%;
+  background: #f8fafc;
+}
+
+
+/* =====================================================
+                SERVICE STRIP WRAPPER
+===================================================== */
+
+.footer-service-wrapper {
+  width: 88%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+
+  position: relative;
+
+  z-index: 5;
+
+  transform: translateY(45px);
+}
+
+
+/* =====================================================
+                    SERVICE STRIP
+===================================================== */
+
+.footer-services {
+  padding: 24px 32px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.1);
+}
+
+
+.footer-service {
+  min-width: 0;
+
+  padding: 5px 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  position: relative;
+}
+
+
+.footer-service:not(:last-child)::after {
+  content: "";
+
+  width: 1px;
+  height: 45px;
+
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  background: #e2e8f0;
+}
+
+
+/* =====================================================
+                    SERVICE ICON
+===================================================== */
+
+.footer-service-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #dcfce7;
+
+  color: #16a34a;
+
+  font-size: 19px;
+}
+
+
+.footer-service h4 {
+  margin: 0 0 5px;
+
+  color: #0f172a;
+
+  font-size: 14px;
+}
+
+
+.footer-service p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+                      MAIN FOOTER
+===================================================== */
+
+.footer-main {
+  padding: 105px 0 0;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 5% 30%,
+      rgba(34, 197, 94, 0.08),
+      transparent 24%
+    ),
+    linear-gradient(
+      135deg,
+      #052e24,
+      #064e3b 55%,
+      #063d31
+    );
+}
+
+
+.footer-main::before {
+  content: "";
+
+  width: 450px;
+  height: 450px;
+
+  position: absolute;
+
+  right: -230px;
+  top: 100px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+
+/* =====================================================
+                    FOOTER CONTAINER
+===================================================== */
+
+.footer-container {
+  width: 88%;
+  max-width: 1450px;
+
+  margin: auto;
+
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    0.7fr
+    0.8fr
+    0.95fr
+    1.15fr;
+
+  gap: 45px;
+}
+
+
+/* =====================================================
+                    BRAND
+===================================================== */
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 18px;
+}
+
+
+.footer-cart {
+  font-size: 27px;
+}
+
+
+.footer-logo h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 29px;
+
+  letter-spacing: -1px;
+}
+
+
+.footer-about {
+  max-width: 340px;
+
+  margin: 0 0 25px;
+
+  color: #a7f3d0;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+                    CONTACT
+===================================================== */
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+
+.footer-contact > div {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #d1fae5;
+
+  font-size: 11px;
+}
+
+
+.footer-contact svg {
+  width: 15px;
+
+  flex-shrink: 0;
+
+  color: #4ade80;
+}
+
+
+/* =====================================================
+                    SOCIAL MEDIA
+===================================================== */
+
+.footer-social {
+  display: flex;
+
+  gap: 8px;
+}
+
+
+.footer-social button {
+  width: 37px;
+  height: 37px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  background:
+    rgba(255, 255, 255, 0.06);
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.footer-social button:hover {
+  transform: translateY(-4px);
+
+  background: #22c55e;
+
+  border-color: #22c55e;
+}
+
+
+/* =====================================================
+                    COLUMNS
+===================================================== */
+
+.footer-column h3 {
+  margin: 5px 0 22px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+
+.footer-column ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.footer-column li {
+  margin-bottom: 13px;
+}
+
+
+.footer-column a {
+  color: #a7f3d0;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  transition: 0.25s ease;
+}
+
+
+.footer-column a:hover {
+  padding-left: 5px;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+                  PARTNER BOX
+===================================================== */
+
+.footer-partner-box {
+  max-width: 250px;
+
+  margin-top: 23px;
+
+  padding: 14px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.footer-partner-box > span {
+  font-size: 24px;
+}
+
+
+.footer-partner-box div {
+  flex: 1;
+}
+
+
+.footer-partner-box strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #ffffff;
+
+  font-size: 10px;
+}
+
+
+.footer-partner-box p {
+  margin: 0;
+
+  color: #a7f3d0;
+
+  font-size: 8px;
+
+  line-height: 1.4;
+}
+
+
+.footer-partner-box button {
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #22c55e;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.footer-partner-box button:hover {
+  transform: translateX(3px);
+
+  background: #ffffff;
+
+  color: #15803d;
+}
+
+
+/* =====================================================
+                    APP ROW
+===================================================== */
+
+.footer-app-row {
+  width: 88%;
+  max-width: 1450px;
+
+  margin: 55px auto 0;
+
+  padding: 22px 0;
+
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.1);
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* =====================================================
+                    APP TEXT
+===================================================== */
+
+.footer-app-text {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+
+.footer-app-icon {
+  width: 47px;
+  height: 47px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  font-size: 21px;
+}
+
+
+.footer-app-text h4 {
+  margin: 0 0 5px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+
+.footer-app-text p {
+  margin: 0;
+
+  color: #86efac;
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+                    APP BUTTONS
+===================================================== */
+
+.footer-app-buttons {
+  display: flex;
+
+  gap: 9px;
+}
+
+
+.footer-app-buttons button {
+  min-width: 145px;
+
+  padding: 8px 13px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #0f172a;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.footer-app-buttons button:hover {
+  transform: translateY(-3px);
+}
+
+
+.footer-app-buttons button > svg {
+  font-size: 21px;
+}
+
+
+.footer-app-buttons button div {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+.footer-app-buttons span {
+  font-size: 7px;
+
+  color: #64748b;
+}
+
+
+.footer-app-buttons strong {
+  font-size: 11px;
+}
+
+
+/* =====================================================
+                    FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+  width: 88%;
+  max-width: 1450px;
+
+  min-height: 75px;
+
+  margin: auto;
+
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+
+.footer-bottom > p {
+  margin: 0;
+
+  color: #86a99b;
+
+  font-size: 9px;
+}
+
+
+/* =====================================================
+                    LEGAL
+===================================================== */
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.footer-legal a {
+  color: #86a99b;
+
+  text-decoration: none;
+
+  font-size: 9px;
+
+  transition: 0.2s ease;
+}
+
+
+.footer-legal a:hover {
+  color: #ffffff;
+}
+
+
+.footer-legal span {
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: #4b7767;
+}
+
+
+/* =====================================================
+                    PAYMENT
+===================================================== */
+
+.footer-payment {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+}
+
+
+.footer-payment > span {
+  color: #86a99b;
+
+  font-size: 8px;
+}
+
+
+.payment-badges {
+  display: flex;
+
+  gap: 5px;
+}
+
+
+.payment-badges div {
+  min-width: 36px;
+
+  padding: 5px 7px;
+
+  text-align: center;
+
+  border-radius: 5px;
+
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  color: #ffffff;
+
+  font-size: 7px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+                    RESPONSIVE
+===================================================== */
+
+@media (max-width: 1150px) {
+
+  .footer-container {
+    grid-template-columns:
+      1.4fr 1fr 1fr;
+
+    row-gap: 45px;
+  }
+
+  .footer-services {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .footer-service:nth-child(2)::after {
+    display: none;
+  }
+
+}
+
+
+/* =====================================================
+                      TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .footer-service-wrapper {
+    width: 92%;
+  }
+
+  .footer-container {
+    width: 90%;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-about {
+    max-width: 500px;
+  }
+
+  .footer-app-row {
+    width: 90%;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    width: 90%;
+
+    padding: 22px 0;
+
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+
+    text-align: center;
+  }
+
+  .footer-payment {
+    justify-content: center;
+  }
+
+}
+
+
+/* =====================================================
+                      MOBILE
+===================================================== */
+
+@media (max-width: 550px) {
+
+  .footer-service-wrapper {
+    width: 94%;
+
+    transform: translateY(35px);
+  }
+
+  .footer-services {
+    padding: 18px;
+
+    grid-template-columns: 1fr;
+
+    border-radius: 20px;
+  }
+
+  .footer-service {
+    padding: 11px 5px;
+
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .footer-service:last-child {
+    border-bottom: none;
+  }
+
+  .footer-service::after {
+    display: none;
+  }
+
+  .footer-main {
+    padding-top: 90px;
+  }
+
+  .footer-container {
+    width: 88%;
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 17px;
+  }
+
+  .footer-partner-box {
+    max-width: 100%;
+  }
+
+  .footer-app-row {
+    width: 88%;
+
+    margin-top: 40px;
+  }
+
+  .footer-app-buttons {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .footer-app-buttons button {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .footer-payment {
+    flex-direction: column;
+  }
+
+}

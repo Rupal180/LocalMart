@@ -1,0 +1,258 @@
+/* =========================================
+              TOAST CONTAINER
+========================================= */
+
+.toast-notification {
+  position: fixed;
+
+  top: 105px;
+  right: 30px;
+
+  z-index: 5000;
+
+  width: 360px;
+  max-width: calc(100vw - 40px);
+
+  min-height: 82px;
+
+  padding: 16px 45px 16px 16px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  overflow: hidden;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 18px 50px rgba(15, 23, 42, 0.14);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateX(120%);
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+
+/* =========================================
+                SHOW TOAST
+========================================= */
+
+.toast-notification.toast-show {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateX(0);
+}
+
+
+/* =========================================
+                ICON
+========================================= */
+
+.toast-icon {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #dcfce7;
+
+  color: #16a34a;
+
+  font-size: 20px;
+}
+
+
+/* CART */
+
+.toast-notification.cart .toast-icon {
+  background: #dcfce7;
+
+  color: #16a34a;
+}
+
+
+/* WISHLIST */
+
+.toast-notification.wishlist .toast-icon {
+  background: #ffe4e6;
+
+  color: #e11d48;
+}
+
+
+/* REMOVE */
+
+.toast-notification.remove .toast-icon {
+  background: #fef2f2;
+
+  color: #ef4444;
+}
+
+
+/* =========================================
+              TEXT CONTENT
+========================================= */
+
+.toast-content {
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+.toast-content h4 {
+  margin: 0 0 4px;
+
+  color: #0f172a;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+
+.toast-content p {
+  margin: 0;
+
+  overflow: hidden;
+
+  color: #64748b;
+
+  font-size: 10px;
+
+  line-height: 1.45;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+                CLOSE
+========================================= */
+
+.toast-close {
+  position: absolute;
+
+  top: 13px;
+  right: 13px;
+
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #94a3b8;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.toast-close:hover {
+  background: #f1f5f9;
+
+  color: #334155;
+}
+
+
+/* =========================================
+            BOTTOM PROGRESS BAR
+========================================= */
+
+.toast-progress {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: #16a34a;
+
+  transform-origin: left;
+}
+
+
+.toast-show .toast-progress {
+  animation: toastTimer 2.8s linear forwards;
+}
+
+
+.toast-notification.wishlist
+.toast-progress {
+  background: #e11d48;
+}
+
+
+.toast-notification.remove
+.toast-progress {
+  background: #ef4444;
+}
+
+
+@keyframes toastTimer {
+
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: scaleX(0);
+  }
+
+}
+
+
+/* =========================================
+                MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .toast-notification {
+    top: 90px;
+
+    right: 15px;
+    left: 15px;
+
+    width: auto;
+
+    max-width: none;
+  }
+
+}

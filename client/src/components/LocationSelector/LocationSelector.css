@@ -1,0 +1,583 @@
+/* =========================================================
+   LOCALMART LOCATION SELECTOR
+========================================================= */
+
+.location-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9998;
+
+  background: rgba(8, 31, 23, 0.62);
+
+  webkit-backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.location-modal {
+  width: min(520px, calc(100% - 30px));
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  z-index: 9999;
+
+  transform: translate(-50%, -50%);
+
+  overflow: hidden;
+
+  padding: 34px;
+
+  border: 1px solid #cfe1d7;
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f3f9f5,
+      #eaf4ee
+    );
+
+  box-shadow:
+    0 35px 90px rgba(8, 43, 30, 0.3);
+}
+
+
+/* =========================================================
+   DECORATION
+========================================================= */
+
+.location-modal-glow {
+  width: 230px;
+  height: 230px;
+
+  position: absolute;
+  top: -130px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(44, 142, 96, 0.13);
+
+  filter: blur(20px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+.location-close-btn {
+  width: 38px;
+  height: 38px;
+
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #d1e2d9;
+  border-radius: 12px;
+
+  background: #edf6f1;
+
+  color: #45675a;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.location-close-btn:hover {
+  background: #dfeee6;
+
+  color: #12372a;
+
+  transform: rotate(4deg);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.location-header {
+  position: relative;
+
+  padding-right: 35px;
+}
+
+.location-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 17px;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #12372a,
+      #236348
+    );
+
+  color: #9be0bc;
+
+  font-size: 23px;
+
+  box-shadow:
+    0 12px 25px rgba(18, 55, 42, 0.18);
+}
+
+.location-tag {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #39805f;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.location-header h2 {
+  margin: 0;
+
+  color: #17382c;
+
+  font-size: 31px;
+  font-weight: 850;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.1px;
+}
+
+.location-header h2 span {
+  color: #1f7a55;
+}
+
+.location-header p {
+  max-width: 420px;
+
+  margin: 12px 0 0;
+
+  color: #6d8378;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CURRENT LOCATION
+========================================================= */
+
+.current-location-btn {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  margin-top: 25px;
+
+  padding: 15px;
+
+  border: 1px solid #c5ddcf;
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      100deg,
+      #e2f1e8,
+      #edf7f1
+    );
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: 0.22s ease;
+}
+
+.current-location-btn:hover {
+  border-color: #72a98d;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(24, 89, 61, 0.08);
+}
+
+.current-location-btn:disabled {
+  cursor: wait;
+
+  opacity: 0.7;
+}
+
+.current-location-icon {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #12372a;
+
+  color: #8ed7b1;
+
+  font-size: 18px;
+}
+
+.current-location-btn > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.current-location-btn strong {
+  color: #234a3a;
+
+  font-size: 12px;
+}
+
+.current-location-btn span {
+  margin-top: 3px;
+
+  color: #71887c;
+
+  font-size: 9px;
+}
+
+.location-arrow-icon {
+  color: #53836c;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.location-divider {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 20px 0;
+}
+
+.location-divider span {
+  flex: 1;
+
+  height: 1px;
+
+  background: #cfded6;
+}
+
+.location-divider p {
+  margin: 0;
+
+  color: #879a90;
+
+  font-size: 8px;
+  font-weight: 850;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   PINCODE
+========================================================= */
+
+.location-pincode-box {
+  display: flex;
+
+  gap: 9px;
+}
+
+.location-input-wrapper {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 13px;
+
+  border: 1px solid #cbded4;
+  border-radius: 13px;
+
+  background: #f7fbf8;
+
+  transition: 0.2s ease;
+}
+
+.location-input-wrapper:focus-within {
+  border-color: #4b9674;
+
+  box-shadow:
+    0 0 0 3px rgba(31, 122, 85, 0.08);
+}
+
+.location-input-wrapper svg {
+  color: #56816c;
+}
+
+.location-input-wrapper input {
+  width: 100%;
+
+  min-height: 46px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #17382c;
+
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.location-input-wrapper input::placeholder {
+  color: #9aaba2;
+
+  font-weight: 500;
+}
+
+.check-location-btn {
+  min-width: 95px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  border: none;
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #12372a,
+      #1f6749
+    );
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.check-location-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 20px rgba(18, 55, 42, 0.17);
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.location-status {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-top: 15px;
+
+  padding: 12px 13px;
+
+  border-radius: 13px;
+}
+
+.location-success {
+  border: 1px solid #bcdac9;
+
+  background: #e1f1e7;
+}
+
+.location-error {
+  border: 1px solid #e2c8c1;
+
+  background: #f8ebe7;
+}
+
+.location-status-icon {
+  margin-top: 1px;
+
+  font-size: 16px;
+}
+
+.location-success
+.location-status-icon {
+  color: #1f7a55;
+}
+
+.location-error
+.location-status-icon {
+  color: #a95743;
+}
+
+.location-status > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-status strong {
+  color: #294b3d;
+
+  font-size: 10px;
+}
+
+.location-status p {
+  margin: 3px 0 0;
+
+  color: #71847a;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.location-benefits {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 8px;
+
+  margin-top: 20px;
+}
+
+.location-benefits div {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 11px;
+
+  border: 1px solid #d5e4dc;
+  border-radius: 12px;
+
+  background: #edf6f1;
+}
+
+.location-benefits div > span {
+  color: #70a087;
+
+  font-size: 8px;
+  font-weight: 900;
+}
+
+.location-benefits p {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+
+  color: #81948a;
+
+  font-size: 8px;
+}
+
+.location-benefits strong {
+  color: #355849;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   PRIVACY
+========================================================= */
+
+.location-privacy {
+  margin: 15px 0 0;
+
+  color: #92a39a;
+
+  text-align: center;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 550px) {
+
+  .location-modal {
+    padding:
+      28px 20px 22px;
+
+    border-radius: 23px;
+  }
+
+  .location-header h2 {
+    font-size: 27px;
+  }
+
+  .location-pincode-box {
+    flex-direction: column;
+  }
+
+  .check-location-btn {
+    min-height: 45px;
+  }
+
+  .location-benefits {
+    grid-template-columns: 1fr;
+  }
+}
